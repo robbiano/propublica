@@ -1,0 +1,46 @@
+body{
+    background-color: rgba(0, 0, 0, 0.137);
+}
+
+header{
+    background-image: url(/img/american-flag.png);
+    background-position: center;
+}
+
+.logo-shield{
+    width: 120px;
+    height: 120px;
+}
+
+.email-logo{
+    width: 50px;
+}
+
+.tabla{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.658);
+}
+
+.text-main-content{
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.section{
+    box-shadow: 0px 0px 10px black;
+}
+
+footer{
+    color: white;
+}
+
+@media(max-width:500px){
+    
+    .btn-modal{
+        width: 120px;
+    }
+
+    .email-logo{
+        display: none;
+    }
+
+}

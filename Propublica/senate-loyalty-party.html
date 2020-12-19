@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/congress.css">
+    <title>senate-loyalty-party</title>
+</head>
+
+<body>
+
+    <div class="header container-fluid">
+        <header class=" mt-4 d-flex justify-content-between">
+
+            <img class="logo-shield m-3" src="img/902px-Seal_of_the_United_States_Congress.svg.png"
+                alt=" us congress logo ">
+
+            <button type="button" class="btn-modal m-5 btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+                data-whatever="@mdo">Info@tgif.net <img class="email-logo" src="img/contacto.png">
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="mailto:info@tgif.net" method="post" enctype="text/plain">
+                                <div class=" form-group">
+                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                    <input type="text" class="form-control" id="recipient-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Message:</label>
+                                    <textarea class="form-control" id="message-text"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Send message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+        <nav class=" p-3 mb-4 navbar navbar-expand-lg navbar-dark bg-primary  ">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class=" nav-item active">
+                        <a class=" nav-link" href="http:index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Congress 113
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http:house.html">House</a>
+                            <a class="dropdown-item" href="http:senators.html">Senate</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Attendance
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http:house-attendance-party.html">House</a>
+                            <a class="dropdown-item" href="http:senate-attendance-party.html">Senate</a>
+                        </div>
+                    </li>
+                    <li class="nav-item active dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Party Loyalty
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="http:house-loyalty-party.html">House</a>
+                            <a class="dropdown-item" href="http:senate-loyalty-party.html">Senate</a>
+                        </div>
+                    </li>
+                </ul>
+                <form action="https://www.google.com/search" method="GET" class="form-inline my-2 my-lg-0">
+                    <input class="border border-danger form-control mr-sm-2" type="search" placeholder="Google" name="q"
+                        aria-label="Search">
+                    <button class="my-2 my-sm-0 btn btn-danger" type="submit" value="google">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div id="app">
+        <div class="container-fluid mb-4">
+
+            <div class="row">
+
+                <div class="col-6 text-justify">
+                    <h2>Party Loyalty</h2>
+                    <h5>Those who consider themselves to be strong partisans, strong Democrats and strong Republicans
+                        respectively, tend to be the most faithful in voting for their party's nominee for office and
+                        legislation that backs their party's agenda.
+                    </h5>
+                </div>
+
+                <div class="col-6">
+                    <h2>Senate at a glance</h2>
+
+                    <table class="tabla table table-striped table-hover bg-white ">
+                        <thead>
+                            <tr >
+                                <th>Party</th>
+                                <th>Number of Reps</th>
+                                <th>% Voted with Prty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Republican</td>
+                                <td>{{statistics.republicanos.length}}</td>
+                                <td>{{statistics.republicanos_vwp}}</td>
+                            </tr>
+                            <tr>
+                                <td>Democrat</td>
+                                <td>{{statistics.democratas.length}}</td>
+                                <td>{{statistics.democratas_vwp}}</td>
+                            </tr>
+                            <tr >
+                                <td>Independent</td>
+                                <td>{{statistics.independientes.length}}</td>
+                                <td>{{statistics.independientes_vwp}}</td>
+                            </tr>
+                            <tr>
+                                <td>total</td>
+                                <td>{{statistics.totalN}}</td>
+                                <td>{{statistics.totalV}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6">
+                    <h2>Least Loyal <br> (Bottom 10% of Party)</h2>
+                    <table class="tabla table table-striped table-hover bg-white">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number Party Votes</th>
+                                <th>% Party Votes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="value in  statistics.leastWithPartyVotes">
+                                <td> <a v-bind:href="value.url">{{value.first_name}} {{value.middle_name}} {{value.last_name}}</a></td>
+                                <td>{{value.total_votes}}</td>
+                                <td>{{value.votes_with_party_pct}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <div class="col-6">
+                    <h2>Most Loyal <br> (top 10% of Party)</h2>
+                    <table class="tabla table table-striped table-hover bg-white">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Number Party Votes</th>
+                                <th>% Party Votes</th>
+                            </tr>
+                        </thead>
+                        <tbody >
+                            <tr v-for="value in  statistics.mostWithPartyVotes">
+                                <td> <a v-bind:href="value.url">{{value.first_name}} {{value.middle_name}} {{value.last_name}}</a></td>
+                                <td>{{value.total_votes}}</td>
+                                <td>{{value.votes_with_party_pct}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="footer container-fluid">
+        <footer class="bg-primary text-center mb-4 mt-4 p-4">
+            <span class="">TGIF 2016 All Rights Reserved</span>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/estadistics-senate-loyalty.js"></script>
+</body>
+
+</html>
